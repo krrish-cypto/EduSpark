@@ -1,0 +1,14 @@
+{
+  "users": {
+    "akhilesh": {
+      "username": "akhilesh",
+      "password": "789",
+      "points": 53,
+      "badges": [],
+      "progress": {},
+      "streak": 1,
+      "lastLogin": "2025-12-06T14:38:40.842Z",
+      "loginCount": 1
+    }
+  }
+}
