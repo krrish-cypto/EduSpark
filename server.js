@@ -1,4 +1,6 @@
 // backend/server.js
+// backend/server.js
+require('dotenv').config(); // ADD THIS LINE AT THE VERY TOP
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose'); // This is the new tool!
@@ -12,9 +14,9 @@ app.get('/', (req, res) => {
 });
 const PORT = process.env.PORT || 3000;
 
-// --- CONNECT TO MONGODB ---
-// Using MongoDB Atlas (Cloud):
-const MONGO_URI = 'mongodb+srv://Krrish:Krrish%40010025@cluster0.sngpr8x.mongodb.net/eduspark?appName=Cluster0';
+// HIDE YOUR PASSWORD LIKE THIS:
+const MONGO_URI = process.env.MONGO_URI; 
+
 mongoose.connect(MONGO_URI)
   .then(() => console.log('✅ Connected to MongoDB'))
   .catch(err => console.error('❌ MongoDB Connection Error:', err));
